@@ -1,3 +1,5 @@
+//Jakkrapong Sunsalai
+//6709616384
 package Bakerry;
 
 public class Cookie implements Toastable{
@@ -20,7 +22,12 @@ public class Cookie implements Toastable{
         return "Cookie is now :" + state ; 
     }
     public void toast() {
-      
+        if(state.equals(SOFT)){
+            state=CRISP;
+          }
+          else if(state.equals(CRISP)){
+            state=BURNT;
+          }
     }
     public void getToastState(){
         

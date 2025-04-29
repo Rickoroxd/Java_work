@@ -1,3 +1,7 @@
+//Jakkrapong Sunsalai
+//6709616384
+package Bakerry;
+
 public class Bread implements Toastable{
     public static final String BURNT = "Burn" ;
     public static final String CRISP = "Crisp" ;
@@ -17,7 +21,12 @@ public class Bread implements Toastable{
         return "Bread is now :" + getState() ; 
     }
     public void toast(){
-      
+      if(state.equals(SOFT)){
+        state=CRISP;
+      }
+      else if(state.equals(CRISP)){
+        state=BURNT;
+      }
     }
     public void getToastState() {
         System.out.println(state);
